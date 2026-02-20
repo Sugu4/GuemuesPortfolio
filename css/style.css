@@ -29,6 +29,10 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Links allgemein */
 a {
     color: var(--primary);
@@ -86,6 +90,7 @@ header {
     justify-content: center;
     text-align: center;
     padding: 0 1.5rem;
+    scroll-margin-top: 80px;
     background: linear-gradient(rgba(0,0,0,1.3), rgba(0,0,0,0.7)),
                 url('../assets/images/hero-tech.jpg') center/cover no-repeat;
 }
