@@ -13,7 +13,7 @@
 
     <!-- HEADER -->
     <header>
-        <nav>
+        <nav class="nav">
             <ul id="menu">
                 <li><a href="#lead">Home</a></li>
                 <li><a href="#about">Über mich</a></li>
@@ -21,8 +21,15 @@
                 <li><a href="#projects">Projekte</a></li>
                 <li><a href="#experience">Erfahrung</a></li>
                 <li><a href="#cv">CV</a></li>
-                <li><a href="#contact" class="cta">Kontakt</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
+
+            <button class="burger" id="burger" aria-label="Navigation umschalten">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
     </header>
 
@@ -34,7 +41,8 @@
             <p>Prozessoptimierung trifft moderne Softwareentwicklung - lass uns deine Lösung bauen.</p>
             <div class="hero-ctas">
                 <a href="#projects" class="btn-primary">Projekte ansehen</a>
-                <a href="assets/cv/Lebenslauf_Sueleyman_Guemues.pdf" target="_blank" class="btn-secondary">Lebenslauf (PDF)</a>
+                <a href="assets/cv/Lebenslauf_Sueleyman_Guemues.pdf" target="_blank" class="btn-secondary">Lebenslauf
+                    (PDF)</a>
             </div>
         </div>
     </section>
@@ -102,7 +110,8 @@
                     Ergonomie, Layoutplanung und REFA-Analyse.
                 </p>
                 <p class="project-tech">Methoden: Lean Management, REFA, Layoutplanung</p>
-                <a href="assets/project/All in one Project.pdf" target="_blank" class="btn-secondary">Projektbericht (PDF)</a>
+                <a href="assets/project/All in one Project.pdf" target="_blank" class="btn-secondary">Projektbericht
+                    (PDF)</a>
             </article>
 
             <!-- 100 Days of Code -->
@@ -127,7 +136,8 @@
                     dokumentiert in einem Projektbericht.
                 </p>
                 <p class="project-tech">Technologien: Python, Algorithmen, Datenanalyse</p>
-                <a href="assets/project/Trading-Bots.pdf" target="_blank" class="btn-secondary">Projektbericht Fobix & Foborix</a>
+                <a href="assets/project/Trading-Bots.pdf" target="_blank" class="btn-secondary">Projektbericht Fobix &
+                    Foborix</a>
             </article>
 
             <!-- Cyberpunk ToDo Web-App -->
@@ -227,7 +237,8 @@
             Hier kannst du meinen vollständigen Lebenslauf als PDF herunterladen:
         </p>
         <p style="text-align:center; margin-top:1.5rem;">
-            <a href="assets/cv/Lebenslauf_Sueleyman_Guemues.pdf" class="btn-primary" target="_blank">Lebenslauf herunterladen</a>
+            <a href="assets/cv/Lebenslauf_Sueleyman_Guemues.pdf" class="btn-primary" target="_blank">Lebenslauf
+                herunterladen</a>
         </p>
     </section>
 
@@ -300,6 +311,22 @@
                 alert("Fehler beim Senden. Bitte versuche es erneut.");
             }
         });
+            // Burger-Menü
+            const burger = document.getElementById('burger');
+            const menu = document.getElementById('menu');
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+
+            // Menü nach Klick auf Link wieder schließen (Mobile UX)
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    burger.classList.remove('open');
+                    menu.classList.remove('open');
+                });
+            });
     </script>
 
 </body>
