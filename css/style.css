@@ -569,8 +569,9 @@ footer a {
     }
 
     #lead {
-        padding: 2rem 1rem 0;
-        height: auto;
+        padding: 3rem 1.25rem 2rem;
+        min-height: 90vh;
+        align-items: flex-start;
     }
 
     .about-grid {
