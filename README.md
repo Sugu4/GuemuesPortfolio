@@ -10,7 +10,7 @@ Hier zeige ich meine Projekte rund um Softwareentwicklung und Prozessoptimierung
 - Übersicht über meine berufliche Laufbahn und Ausbildung
 - Projekte wie:
   - All in One Projekt – Lean & Prozessoptimierung (PDF)
-  - ToDo Web‑App (Cyberpunk‑Stil)
+  - ToDo Web‑App
   - Trading Bots (Fobix & Foborix)
   - 100 Days of Code – Lernreise
   - SQL & Java Datenbankprojekte
